@@ -13,20 +13,13 @@ module.exports = {
       ],
       files: ["*.ts", "*.tsx"],
       parserOptions: {
+        parser: "@typescript-eslint/parser",
         project: "tsconfig.json",
       },
     },
   ],
-  parser: "@typescript-eslint/parser",
-  parserOptions: {
-    project: "./tsconfig.json",
-  },
   plugins: ["@typescript-eslint"],
-  extends: [
-    "plugin:astro/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "prettier",
-  ],
+  extends: ["plugin:astro/recommended", "prettier"],
   rules: {
     "@typescript-eslint/consistent-type-imports": [
       "warn",
