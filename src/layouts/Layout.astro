@@ -32,12 +32,12 @@ const year = new Date().getFullYear();
       <a href="/"><Image src={logo} alt="Evolut logo" height={96} /></a>
     </header>
     <main class="flex h-screen justify-center">
-      <div class="flex h-full w-full flex-col md:max-w-2xl lg:max-w-4xl">
+      <div class="flex h-full w-full flex-col gap-10 md:max-w-2xl lg:max-w-4xl">
         <slot />
       </div>
     </main>
     <footer class="flex h-32 flex-col items-center justify-center gap-2">
-      <div class="text-2xl font-bold"><a href="/">Evolut</a></div>
+      <a href="/"><Image src={logo} alt="Evolut logo" height={96} /></a>
       <div class="text-slate-300 hover:text-slate-100">
         <a href="/get-started">Get Started</a>
       </div>
