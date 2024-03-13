@@ -1,4 +1,7 @@
 ---
+import { Image } from "astro:assets";
+import logo from "../images/logo.png";
+
 interface Props {
   title: string;
 }
@@ -26,7 +29,7 @@ const year = new Date().getFullYear();
   </head>
   <body>
     <header class="flex h-24 items-center justify-center">
-      <div class="text-4xl font-bold"><a href="/">Evolut</a></div>
+      <a href="/"><Image src={logo} alt="Evolut logo" height={96} /></a>
     </header>
     <main class="flex h-screen justify-center">
       <div class="flex h-full w-full flex-col md:max-w-2xl lg:max-w-4xl">
