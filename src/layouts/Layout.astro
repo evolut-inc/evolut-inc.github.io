@@ -4,6 +4,8 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+const year = new Date().getFullYear();
 ---
 
 <!doctype html>
@@ -23,9 +25,19 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <header>Header</header>
+    <header class="flex h-24 items-center justify-center">
+      <div class="text-3xl font-bold"><a href="/">Evolut</a></div>
+    </header>
     <slot />
-    <footer>footer</footer>
+    <footer class="flex h-32 flex-col items-center justify-center gap-2">
+      <div class="text-3xl font-bold"><a href="/">Evolut</a></div>
+      <div class="text-slate-300 hover:text-slate-100">
+        <a href="/get-started">Get Started</a>
+      </div>
+      <div class="text-slate-300">
+        &#169;{year} evolut.TLD. All Rights Reserved.
+      </div>
+    </footer>
   </body>
 </html>
 
